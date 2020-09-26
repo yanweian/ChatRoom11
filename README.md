@@ -1,2 +1,2 @@
 # chatRoom
-chat online implement by C++11
+chatting online implemented by C++11
