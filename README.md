@@ -15,7 +15,7 @@ chatting online implemented by modern C++
 ### Now
 
 1. Modern C++
-2. Fuse epoll and thread pool
+2. multi-thread 
 3. Text
 4. Forward by server using tcp
 
