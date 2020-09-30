@@ -122,7 +122,6 @@ public:
 
     ListenSocket &operator=(ListenSocket &&) = default;
 
-
     void init();
 
 private:
@@ -159,7 +158,6 @@ private:
                          string msg;
                          try {
                              if (conn.receive_message(msg) == 0) {
-                                 conn.do_close();
                                  accept_sockets.erase(conn.get_socket());
                                  break;
                              }
@@ -178,7 +176,6 @@ private:
                                      if (it->first != conn.get_socket())
                                          it->second->send_message(msg);
                                  } catch (...) {
-                                     it->second->do_close();
                                      it = accept_sockets.erase(it);
                                      continue;
                                  }
